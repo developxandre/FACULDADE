@@ -1,0 +1,24 @@
+def definir_imc(peso, altura): #def (define uma função) definir_imc (nome da função) (peso, altura) <- parametros da função (dados que serao utilizados)
+    return peso / (altura * altura)
+
+def categoria_imc(imc):
+    if imc < 18.5:
+        return "Abaixo do peso"
+    elif 18.5 <= imc < 24.9:
+        return "Peso ideal"
+    elif 25 <= imc < 29.9:
+        return "acima do peso"
+    else:
+        return "Bem acima do peso (obesidade)"
+
+# entrada das variaveis
+peso = float(input("Digite seu peso em kg: "))
+altura = float(input("Digite sua altura em metros: "))
+
+# atribuir variavel a função
+imc = definir_imc(peso, altura)
+categoria_peso = categoria_imc(imc)
+
+# Relatorio
+print(f"Seu IMC é: {imc:.2f}")
+print(f"Classificação: {categoria_peso}")
